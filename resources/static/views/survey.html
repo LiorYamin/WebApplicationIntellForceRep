@@ -1,0 +1,37 @@
+<div>
+    <h3>Question number: {{questionNumber}}</h3>
+    <div id="question-title-div">
+    	<h1>{{currentQuestion.question}}</h2>
+    </div>
+    <div id="img-div"> 
+        <img class="app-img" ng-src="../images/{{currentQuestion.image}}"/>
+    </div>
+    <div id="question-answers">
+    		<table style="width: 100%;">
+	    		<tr>
+	    			<td>
+					    <input type="checkbox" id="checkbox0" ng-model="checkboxes[0].checked" ng-click="updateSelection(0,checkboxes)">
+					    <label for="checkbox0" >{{currentQuestion.answers[0]}}</label><br>
+				    </td>
+				    <td>
+				    	<input type="checkbox" id="checkbox2" ng-model="checkboxes[2].checked" ng-click="updateSelection(2,checkboxes)">
+					    <label for="checkbox2">{{currentQuestion.answers[2]}}</label><br>
+				    </td>
+			    </tr>
+			    <tr>
+	    			<td class="lower-td">
+					    <input type="checkbox" id="checkbox1" ng-model="checkboxes[1].checked"  ng-click="updateSelection(1,checkboxes)">
+					    <label for="checkbox1">{{currentQuestion.answers[1]}}</label>
+				    </td>
+				    <td class="lower-td">
+				    	<input type="checkbox" id="checkbox3" ng-model="checkboxes[3].checked"  ng-click="updateSelection(3,checkboxes)">
+					    <label for="checkbox3">{{currentQuestion.answers[3]}}</label>
+				    </td>
+			    </tr>
+		    </table>
+    </div>  
+    <div class="form-group">
+			<button class="action-button" type="submit" ng-click="next();"  >{{questionNumber == questions.length ? 'Finish' : 'Next'}}</button>
+	</div>     
+    
+</div>

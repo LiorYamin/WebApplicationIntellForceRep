@@ -1,0 +1,54 @@
+<div class="col-md-6 col-md-offset-3">
+<div>
+	<form name="register-form" ng-submit="registerUser()" role="form">
+	    <h3>{{ headingTitle }}</h3>
+	    <table class="center">
+	    	<tr>
+		       <td>
+			   <label for="id">ID:</label>
+			   </td>
+			   <td>
+			   <input class="input-register" type="number" name="id" id="id" ng-model="id"/>
+		  		</td>
+		    <tr>
+		    	<td>
+			    <label for="firstName">First Name:</label>
+			    </td>
+			    <td>
+			    <input class="input-register" type="text" name="firstName" id="firstName" ng-model="firstName"/>
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td>
+			    <label for="lastName">Last Name:</label>
+			    </td>
+			    <td>
+			    <input class="input-register" type="text" name="lastName" id="lastName" ng-model="lastName"/>
+		    	</td>
+		    </tr>
+		    <tr>
+		    	<td>
+			    <label for="email">E-Mail:</label>
+			    </td>
+			    <td>
+			    <input class="input-register" type="text" name="email" id="email" ng-model="email"/>
+		   		</td>
+		    </tr>
+		    <tr>
+		    	<td>
+			    <label for="phone">Phone:</label>
+				</td>
+				<td>
+				<input class="input-register" type="text" name="phone" id="phone" ng-model="phone"/> 
+				</td>
+			</tr>	
+			<tr>
+				<td colspan="2" style="text-align:center;">
+				<button type="submit" style="width:30%;" class="action-button">Send</button>
+				</td>
+			<tr>
+		</table>
+	
+	</form>   
+</div>
+</div>
